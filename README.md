@@ -1,44 +1,43 @@
-langchain_chaining
-A beginner-level LangChain project demonstrating LCEL (LangChain Expression Language) by chaining two LLM calls — one to explain a concept, and another to translate the explanation to Japanese.
-What it does
+```markdown
+# langchain_chaining
 
-Takes a concept as input from the terminal
-Chain 1 — explains the concept in one sentence
-Chain 2 — translates that explanation to Japanese
+A simple LangChain LCEL demo that chains two prompts sequentially — one to explain a concept, and one to translate the explanation to Japanese.
 
-Tech Stack
+## What it does
 
-LangChain — chaining framework
-Groq — LLM provider
-llama-3.3-70b-versatile — model used
-python-dotenv — for managing API keys
+1. Takes a concept as input from the terminal
+2. Chain 1 explains the concept in one sentence
+3. Chain 2 translates that explanation to Japanese
 
-Setup
+## Tech stack
 
-Clone the repo
+- [LangChain](https://www.langchain.com/) (LCEL)
+- [Groq](https://groq.com/) (llama-3.3-70b-versatile)
+- Python
 
-bash   git clone https://github.com/yourusername/langchain_chaining.git
-   cd langchain_chaining
+## Setup
 
-Install dependencies
+1. Clone the repo
+2. Install dependencies:
+   ```bash
+   pip install langchain langchain-groq langchain-core python-dotenv
+   ```
+3. Create a `.env` file in the root folder:
+   ```
+   GROQ_API_KEY=your_key_here
+   ```
+4. Run:
+   ```bash
+   python main.py
+   ```
 
-bash   pip install langchain langchain-groq langchain-core python-dotenv
+## Usage
 
-Create a .env file in the root directory
-
-   GROQ_API_KEY=your_api_key_here
-
-Run
-
-bash   python main.py
-Example
+```
 You: photosynthesis
-Chain 1 (English): Photosynthesis is the process by which plants convert sunlight, water, and carbon dioxide into glucose and oxygen.
-Chain 2 (Japanese): 光合成とは、植物が太陽光、水、二酸化炭素をブドウ糖と酸素に変換するプロセスです。
-Concepts Covered
+Chain 1 (English): Photosynthesis is the process by which plants convert sunlight into energy.
+Chain 2 (Japanese): 光合成とは、植物が太陽光をエネルギーに変換するプロセスです。
+```
 
-LangChain basics
-LCEL (| pipe syntax)
-PromptTemplate
-StrOutputParser
-Sequential chaining
+Type `exit` to quit.
+```
