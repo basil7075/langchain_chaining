@@ -1,4 +1,3 @@
-```markdown
 # langchain_chaining
 
 A simple LangChain LCEL demo that chains two prompts sequentially — one to explain a concept, and one to translate the explanation to Japanese.
@@ -40,4 +39,3 @@ Chain 2 (Japanese): 光合成とは、植物が太陽光をエネルギーに変
 ```
 
 Type `exit` to quit.
-```
