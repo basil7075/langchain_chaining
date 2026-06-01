@@ -1,4 +1,4 @@
-# langchain_chaining
+# langchain_Translator
 
 A simple LangChain LCEL demo that chains two prompts sequentially — one to explain a concept, and one to translate the explanation to Japanese.
 
